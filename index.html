@@ -175,6 +175,8 @@ tr.feat td,td.feat-c{background:var(--brass-soft)}
 .amb b{font-size:15px;line-height:1.3}
 .amb span{font-size:13px;color:var(--muted)}
 .amb.open{border-style:dashed;background:transparent}
+.amb .nw{font-style:normal;white-space:nowrap}
+@media (max-width:640px){.notice{flex-direction:column;gap:4px}}
 .amb-more{display:none}
 @media (max-width:640px){
   .amb.extra{display:none}
@@ -395,6 +397,7 @@ footer a{color:var(--band-fg)}
   </section>
   <section style="padding-block:40px 72px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+      <div class="notice" role="note"><b>Sample listings.</b><span>These show how names will appear. Real Founding Ambassadors are added as they join, listed by name, credentials and specialty only.</span></div>
       <div class="wall" id="wall"></div>
     </div>
   </section>
@@ -492,24 +495,23 @@ footer a{color:var(--band-fg)}
 <script>
 (function(){
   // Placeholder ambassador wall: sample names only, replaced with real, consenting ambassadors before launch.
-  var names=[];
+  var names=[["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Cardiology"], ["Sample Name, PA-C", "Primary care"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "Pediatrics"], ["Sample Name, PA-C", "Urgent care"], ["Sample Name, PA-C", "Dermatology"], ["Sample Name, PA-C", "Critical care"], ["Sample Name, PA-C", "Oncology"], ["Sample Name, PA-C", "Surgery"], ["Sample Name, PA-C", "Psychiatry"], ["Sample Name, PA-C", "Neurology"], ["Sample Name, PA-C", "Family medicine"], ["Sample Name, PA-C", "Cardiothoracic surgery"], ["Sample Name, PA-C", "Women's health"], ["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Pediatric surgery"], ["Sample Name, PA-C", "Gastroenterology"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Endocrinology"], ["Sample Name, PA-C", "Urology"], ["Sample Name, PA-C", "Primary care"], ["Sample Name, PA-C", "Anesthesiology"], ["Sample Name, PA-C", "Neonatology"], ["Sample Name, PA-C", "Pulmonology"], ["Sample Name, PA-C", "Infectious disease"], ["Sample Name, PA-C", "Trauma surgery"], ["Sample Name, PA-C", "Pediatrics"], ["Sample Name, PA-C", "Nephrology"], ["Sample Name, PA-C", "Rheumatology"], ["Sample Name, PA-C", "Interventional radiology"], ["Sample Name, PA-C", "Palliative care"], ["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Neurosurgery"], ["Sample Name, PA-C", "Occupational medicine"], ["Sample Name, PA-C", "Urgent care"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "ENT"], ["Sample Name, PA-C", "Sports medicine"], ["Sample Name, PA-C", "Family medicine"], ["Sample Name, PA-C", "Cardiology"], ["Sample Name, PA-C", "Pediatric oncology"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Behavioral health"], ["Sample Name, PA-C", "Critical care"], ["Sample Name, PA-C", "Dermatology"], ["Sample Name, PA-C", "Hematology"], ["Sample Name, PA-C", "Plastic surgery"]];
   var wall=document.getElementById('wall');
-  names.forEach(function(n){
-    var d=document.createElement('div');d.className='amb';
+  var shown=6;
+  names.forEach(function(n,i){
+    var d=document.createElement('div');d.className='amb'+(i>=shown?' extra':'');
     d.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b></b><span></span>';
-    d.querySelector('b').textContent=n[0];
+    d.querySelector('b').innerHTML=n[0].replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}).replace(/PA-C/g,'<i class="nw">PA-C</i>');
     d.querySelector('span').textContent=n[1];
     wall.appendChild(d);
   });
   for(var i=names.length;i<50;i++){
-    var o=document.createElement('a');o.className='amb open';o.href='#join';o.style.textDecoration='none';o.style.color='inherit';
+    var o=document.createElement('a');o.className='amb open'+(i>=shown?' extra':'');o.href='#join';o.style.textDecoration='none';o.style.color='inherit';
     o.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b>This spot is open</b><span>Become a Founding Ambassador</span>';
-    if(i>=names.length+6)o.className+=' extra';
     wall.appendChild(o);
   }
-  var hidden=50-names.length-6;
-  if(hidden>0){var m=document.createElement('a');m.className='amb-more';m.href='#join';
-    m.innerHTML='<b>+'+hidden+' more spots open</b><span>Become a Founding Ambassador \u2192</span>';wall.appendChild(m);}
+  var m=document.createElement('a');m.className='amb-more';m.href='#join';
+  m.innerHTML='<b>+'+(50-shown)+' more spots</b><span>Become a Founding Ambassador \u2192</span>';wall.appendChild(m);
 
   // Phone menu
   var top=document.querySelector('header.top'),mb=document.querySelector('.menu-btn');
