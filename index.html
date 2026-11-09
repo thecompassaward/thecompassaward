@@ -260,7 +260,7 @@ footer a{color:var(--band-fg)}
       <div>
         <p class="kicker">Nurses, including NPs and other advanced practice nurses, already have awards of their own.</p>
         <h1>Your PAs deserve one too.</h1>
-        <p class="lead">The ComPAss Award™ is a patient-nominated recognition program for physician assistants and physician associates, that hospitals and practices run for their own teams. Created by practicing PAs. Ready to launch in 30 days.</p>
+        <p class="lead">The ComPAss Award<span class="tm">™</span> is a patient-nominated recognition program for physician assistants and physician associates, that hospitals and practices run for their own teams. Created by practicing PAs. Ready to launch in 30 days.</p>
         <div class="actions">
           <a class="btn btn-brass" href="#hospitals">See the founding partner offer</a>
           <a class="btn btn-ghost" href="#ambassadors">Meet our ambassadors</a>
@@ -405,7 +405,7 @@ footer a{color:var(--band-fg)}
   <section class="band" style="padding-block:60px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:16px">
       <p class="eyebrow" style="color:var(--brass-hi)">An invitation for PAs · 50 founding spots</p>
-      <h1>Become a Founding Ambassador of the ComPAss Award™</h1>
+      <h1>Become a Founding Ambassador of the ComPAss Award<span class="tm">™</span></h1>
       <p class="lead muted">Help launch the first national, patient-nominated award program for PAs. It takes about an hour, spread across the next few months.</p>
     </div>
   </section>
@@ -483,7 +483,7 @@ footer a{color:var(--band-fg)}
 
 <footer>
   <div class="wrap">
-    <div><b style="color:var(--band-fg)">The ComPAss Award™ for PAs</b><br>Honoring physician assistants and physician associates.<br>Created by practicing PAs.</div>
+    <div><b style="color:var(--band-fg)">The ComPAss Award<span class="tm">™</span> for PAs</b><br>Honoring physician assistants and physician associates.<br>Created by practicing PAs.</div>
     <div>info@thecompassaward.com</div>
     <div style="max-width:46ch">© 2026 The ComPAss Award. An independent recognition program created by practicing PAs.</div>
   </div>
@@ -497,7 +497,7 @@ footer a{color:var(--band-fg)}
   names.forEach(function(n){
     var d=document.createElement('div');d.className='amb';
     d.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b></b><span></span>';
-    d.querySelector('b').textContent=n[0]+', PA-C';
+    d.querySelector('b').textContent=n[0];
     d.querySelector('span').textContent=n[1];
     wall.appendChild(d);
   });
