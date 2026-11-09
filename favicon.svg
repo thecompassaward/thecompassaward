@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" rx="40" fill="#14284B"/><g transform="translate(6 6) scale(.94)"><g>
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#D9A441" stroke-width="4"/>
+      <circle cx="100" cy="100" r="87" fill="none" stroke="#D9A441" stroke-width="1.5"/>
+      <g transform="rotate(45 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
+      <g transform="rotate(135 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
+      <g transform="rotate(225 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
+      <g transform="rotate(315 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
+      <g class="needle">
+        <polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/>
+        <g transform="rotate(90 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
+        <g transform="rotate(180 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
+        <g transform="rotate(270 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
+      </g>
+      <circle cx="100" cy="100" r="25" fill="#14284B" stroke="#FBFAF6" stroke-width="3"/>
+      <text x="100" y="109" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="25" font-weight="800" fill="#FBFAF6">PA</text>
+    </g></g></svg>
