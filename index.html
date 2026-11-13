@@ -455,12 +455,12 @@ footer a{color:var(--band-fg)}
       <div class="offer">
         <div class="price">50<small>spots in our first class</small></div>
         <div><h3>Join our first class of 50</h3><p class="muted">Be among the first National Ambassadors listed on our site. There is no cost, and you can step away at any time.</p></div>
-        <a class="btn btn-navy" href="https://tally.so/r/rDBZvL" target="_blank" rel="noopener">Sign up now</a>
+        <a class="btn btn-navy" href="https://tally.so/r/rDBZvL" data-goatcounter-click="ambassador-signup-form" data-goatcounter-title="Ambassador sign-up form" target="_blank" rel="noopener">Sign up now</a>
       </div>
       <div class="panel" id="join-how">
         <h3>How to join</h3>
         <p>Fill out the 3-minute sign-up form: your name, credentials, specialty, and your permission to be listed.</p>
-        <p><a class="btn btn-navy" href="https://tally.so/r/rDBZvL" target="_blank" rel="noopener">Open the sign-up form</a></p>
+        <p><a class="btn btn-navy" href="https://tally.so/r/rDBZvL" data-goatcounter-click="ambassador-signup-form" data-goatcounter-title="Ambassador sign-up form" target="_blank" rel="noopener">Open the sign-up form</a></p>
         <p class="muted" style="font-size:14px">We list only your name, credentials and specialty. We never list your employer or imply your employer endorses the award. Questions? Email <span class="copy">info@thecompassaward.com</span>.</p>
       </div>
     </div>
@@ -474,7 +474,7 @@ footer a{color:var(--band-fg)}
       <p class="eyebrow" style="color:var(--brass-hi)">For partner hospitals and practices</p>
       <h1 style="font-size:clamp(34px,4.6vw,54px);font-weight:800;letter-spacing:-.02em">The Partner Program Guide</h1>
       <p class="lead muted">Everything your team needs to launch and run the ComPAss Award: roles, a 30-day launch plan, the scoring rubric, a ceremony script, and ready-to-use templates.</p>
-      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-brass" id="dl" href="ComPAss-Award-Partner-Guide.pdf">Download the guide (PDF)</a></div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-brass" id="dl" href="ComPAss-Award-Partner-Guide.pdf" data-goatcounter-click="partner-guide-pdf" data-goatcounter-title="Partner Guide PDF">Download the guide (PDF)</a></div>
       <p class="muted" id="dl-msg" style="font-size:14px" aria-live="polite"></p>
     </div>
   </section>
@@ -584,6 +584,21 @@ footer a{color:var(--band-fg)}
       msg.textContent='The download is unavailable here. It will work on the live site.';
     });
   });
+})();
+</script>
+
+<script>window.goatcounter={no_onload:true};</script>
+<script data-goatcounter="https://thecompassaward.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>
+(function(){
+  var last=null;
+  function send(tries){
+    var path=location.pathname+(location.hash&&location.hash.length>1?location.hash:'#home');
+    if(path===last)return;
+    if(window.goatcounter&&window.goatcounter.count){last=path;window.goatcounter.count({path:path});}
+    else if((tries||0)<40){setTimeout(function(){send((tries||0)+1);},250);}
+  }
+  send(0);window.addEventListener('hashchange',function(){send(0);});
 })();
 </script>
 
