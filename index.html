@@ -213,6 +213,20 @@ footer{background:var(--band);color:var(--band-muted);font-size:14px}
 footer .wrap{padding-block:40px;display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between}
 footer a{color:var(--band-fg)}
 .copy{user-select:all;font-weight:600;color:var(--fg)}
+/* phone polish */
+.btn{justify-content:center;text-align:center}
+@media (max-width:640px){
+  .hero{padding-block:40px 56px}
+  .hero svg{max-width:140px}
+  .hero .actions{flex-direction:column;align-items:stretch}
+  .hero .actions .btn{width:100%}
+  .band .btn-brass,.offer .btn{width:100%}
+  .offer{padding:26px 22px}
+  .offer .price{font-size:46px}
+  .fact b{font-size:22px}
+  .sechead h2{font-size:26px}
+}
+@media (max-width:380px){.facts{grid-template-columns:1fr;gap:12px}}
 @media (prefers-reduced-motion:no-preference){.hero svg .needle{transform-origin:100px 100px;animation:settle 1.6s cubic-bezier(.3,1.4,.5,1) .2s both}@keyframes settle{from{transform:rotate(-38deg)}to{transform:rotate(0)}}}
 </style>
 
