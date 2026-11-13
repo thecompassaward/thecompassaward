@@ -430,7 +430,7 @@ footer a{color:var(--band-fg)}
   </section>
   <section style="padding-block:40px 72px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:24px">
-      <div class="notice" role="note"><b>Sample listings.</b><span>These show how names will appear. Real National Ambassadors are added as they join, listed by name, credentials and specialty only.</span></div>
+      <div class="notice" id="amb-notice" role="note"><b>Sample listings.</b><span>These show how names will appear. Real National Ambassadors are added as they join, listed by name, credentials and specialty only.</span></div>
       <div class="wall" id="wall"></div>
     </div>
   </section>
@@ -529,15 +529,22 @@ footer a{color:var(--band-fg)}
 (function(){
   // Placeholder ambassador wall: sample names only, replaced with real, consenting ambassadors before launch.
   var names=[["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Cardiology"], ["Sample Name, PA-C", "Primary care"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "Pediatrics"], ["Sample Name, PA-C", "Urgent care"], ["Sample Name, PA-C", "Dermatology"], ["Sample Name, PA-C", "Critical care"], ["Sample Name, PA-C", "Oncology"], ["Sample Name, PA-C", "Surgery"], ["Sample Name, PA-C", "Psychiatry"], ["Sample Name, PA-C", "Neurology"], ["Sample Name, PA-C", "Family medicine"], ["Sample Name, PA-C", "Cardiothoracic surgery"], ["Sample Name, PA-C", "Women's health"], ["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Pediatric surgery"], ["Sample Name, PA-C", "Gastroenterology"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Endocrinology"], ["Sample Name, PA-C", "Urology"], ["Sample Name, PA-C", "Primary care"], ["Sample Name, PA-C", "Anesthesiology"], ["Sample Name, PA-C", "Neonatology"], ["Sample Name, PA-C", "Pulmonology"], ["Sample Name, PA-C", "Infectious disease"], ["Sample Name, PA-C", "Trauma surgery"], ["Sample Name, PA-C", "Pediatrics"], ["Sample Name, PA-C", "Nephrology"], ["Sample Name, PA-C", "Rheumatology"], ["Sample Name, PA-C", "Interventional radiology"], ["Sample Name, PA-C", "Palliative care"], ["Sample Name, PA-C", "Emergency medicine"], ["Sample Name, PA-C", "Neurosurgery"], ["Sample Name, PA-C", "Occupational medicine"], ["Sample Name, PA-C", "Urgent care"], ["Sample Name, PA-C", "Hospital medicine"], ["Sample Name, PA-C", "ENT"], ["Sample Name, PA-C", "Sports medicine"], ["Sample Name, PA-C", "Family medicine"], ["Sample Name, PA-C", "Cardiology"], ["Sample Name, PA-C", "Pediatric oncology"], ["Sample Name, PA-C", "Orthopedics"], ["Sample Name, PA-C", "Behavioral health"], ["Sample Name, PA-C", "Critical care"], ["Sample Name, PA-C", "Dermatology"], ["Sample Name, PA-C", "Hematology"], ["Sample Name, PA-C", "Plastic surgery"]];
+  // REAL National Ambassadors: [name with credentials, specialty], oldest sign-up first. Only people who gave permission.
+  var real=[]; // REAL_AMBASSADORS
   var wall=document.getElementById('wall');
-  var shown=4; // one row of samples: 4 on wide screens, 2 on phones
-  names.forEach(function(n,i){
-    var d=document.createElement('div');d.className='amb'+(i>=shown?' extra':(i>=2?' wide-only':''));
+  function esc(t){return String(t).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];});}
+  function card(n,cls){
+    var d=document.createElement('div');d.className='amb'+(cls||'');
     d.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b></b><span></span>';
-    d.querySelector('b').innerHTML=n[0].replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}).replace(/PA-C/g,'<i class="nw">PA-C</i>');
+    d.querySelector('b').innerHTML=esc(n[0]).replace(/PA-C/g,'<i class="nw">PA-C</i>');
     d.querySelector('span').textContent=n[1];
     wall.appendChild(d);
-  });
+  }
+  real.forEach(function(n){card(n,'');});
+  // Sample cards fill out the first row (4 on wide screens, 2 on phones) until enough real ambassadors join
+  for(var k=0;k<Math.max(0,4-real.length);k++){card(names[k],(real.length+k>=2?' wide-only':''));}
+  if(real.length>=4){var nt=document.getElementById('amb-notice');if(nt)nt.style.display='none';}
+
   var m=document.createElement('a');m.className='amb-more';m.href='#join';
   m.innerHTML='<b>Spots are open in our first class of 50</b><span>Become a National Ambassador \u2192</span>';wall.appendChild(m);
 
