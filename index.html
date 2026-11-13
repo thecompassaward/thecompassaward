@@ -406,15 +406,15 @@ footer a{color:var(--band-fg)}
 <div class="view" id="v-ambassadors" hidden>
   <section class="band" style="padding-block:60px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:16px">
-      <p class="eyebrow" style="color:var(--brass-hi)">Founding Ambassadors</p>
+      <p class="eyebrow" style="color:var(--brass-hi)">National Ambassadors</p>
       <h1 style="font-size:clamp(34px,4.6vw,54px);font-weight:800;letter-spacing:-.02em">PAs who believe their colleagues deserve to be seen</h1>
-      <p class="lead muted">Our Founding Ambassadors are practicing PAs from across specialties who stand behind the ComPAss Award and help bring it to PA workplaces nationwide.</p>
-      <div><a class="btn btn-brass" href="#join">Become a Founding Ambassador</a></div>
+      <p class="lead muted">Our National Ambassadors are practicing PAs from across specialties who stand behind the ComPAss Award and help bring it to PA workplaces nationwide.</p>
+      <div><a class="btn btn-brass" href="#join">Become a National Ambassador</a></div>
     </div>
   </section>
   <section style="padding-block:40px 72px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:24px">
-      <div class="notice" role="note"><b>Sample listings.</b><span>These show how names will appear. Real Founding Ambassadors are added as they join, listed by name, credentials and specialty only.</span></div>
+      <div class="notice" role="note"><b>Sample listings.</b><span>These show how names will appear. Real National Ambassadors are added as they join, listed by name, credentials and specialty only.</span></div>
       <div class="wall" id="wall"></div>
     </div>
   </section>
@@ -424,8 +424,8 @@ footer a{color:var(--band-fg)}
 <div class="view onepager" id="v-join" hidden>
   <section class="band" style="padding-block:60px">
     <div class="wrap" style="display:flex;flex-direction:column;gap:16px">
-      <p class="eyebrow" style="color:var(--brass-hi)">An invitation for PAs · 50 founding spots</p>
-      <h1>Become a Founding Ambassador of the ComPAss Award<span class="tm">™</span></h1>
+      <p class="eyebrow" style="color:var(--brass-hi)">An invitation for PAs · 50 spots in our first class</p>
+      <h1>Become a National Ambassador of the ComPAss Award<span class="tm">™</span></h1>
       <p class="lead muted">Help launch the first national, patient-nominated award program for PAs. It takes about an hour, spread across the next few months.</p>
     </div>
   </section>
@@ -433,12 +433,12 @@ footer a{color:var(--band-fg)}
     <div class="wrap" style="display:flex;flex-direction:column;gap:40px">
       <div class="ask">
         <div class="panel"><p class="eyebrow">What we ask</p><h3>A little, a few times</h3><ul class="ticks"><li><span>Share our launch post and the PA survey once</span></li><li><span>Tell us if your workplace might be interested</span></li><li><span>Let us list your name, credentials and specialty (never your employer)</span></li></ul></div>
-        <div class="panel"><p class="eyebrow">What you get</p><h3>A line worth adding to your CV</h3><ul class="ticks"><li><span>The title Founding Ambassador, The ComPAss Award for PAs</span></li><li><span>Your name on our Founding Ambassadors page</span></li><li><span>A ComPAss lapel pin</span></li></ul></div>
+        <div class="panel"><p class="eyebrow">What you get</p><h3>A line worth adding to your CV</h3><ul class="ticks"><li><span>The title National Ambassador, The ComPAss Award for PAs</span></li><li><span>Your name on our National Ambassadors page</span></li><li><span>A ComPAss lapel pin</span></li></ul></div>
         <div class="panel"><p class="eyebrow">Why it matters</p><h3>PAs are left out today</h3><p class="muted">Where hospitals group PAs and NPs as APPs, NPs can be honored through established nursing awards and PAs cannot. Ambassadors show hospitals that PAs want this.</p></div>
       </div>
       <div class="offer">
-        <div class="price">50<small>founding spots</small></div>
-        <div><h3>Founding spots close once all 50 are filled</h3><p class="muted">After that, new members join as ComPAss Ambassadors. There is no cost, and you can step away at any time.</p></div>
+        <div class="price">50<small>spots in our first class</small></div>
+        <div><h3>Join our first class of 50</h3><p class="muted">Be among the first National Ambassadors listed on our site. There is no cost, and you can step away at any time.</p></div>
         <a class="btn btn-navy" href="https://tally.so/r/rDBZvL" target="_blank" rel="noopener">Sign up now</a>
       </div>
       <div class="panel" id="join-how">
@@ -524,11 +524,11 @@ footer a{color:var(--band-fg)}
   });
   for(var i=names.length;i<50;i++){
     var o=document.createElement('a');o.className='amb open'+(i>=shown?' extra':'');o.href='#join';o.style.textDecoration='none';o.style.color='inherit';
-    o.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b>This spot is open</b><span>Become a Founding Ambassador</span>';
+    o.innerHTML='<svg viewBox="0 0 100 100" aria-hidden="true"><use href="#person"/></svg><b>This spot is open</b><span>Become a National Ambassador</span>';
     wall.appendChild(o);
   }
   var m=document.createElement('a');m.className='amb-more';m.href='#join';
-  m.innerHTML='<b>+'+(50-shown)+' more spots</b><span>Become a Founding Ambassador \u2192</span>';wall.appendChild(m);
+  m.innerHTML='<b>+'+(50-shown)+' more spots</b><span>Become a National Ambassador \u2192</span>';wall.appendChild(m);
 
   // Phone menu
   var top=document.querySelector('header.top'),mb=document.querySelector('.menu-btn');
