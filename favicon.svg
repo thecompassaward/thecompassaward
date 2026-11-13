@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" rx="40" fill="#174D66"/><g transform="translate(6 6) scale(.94)"><g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" rx="40" fill="#2F3D4C"/><g transform="translate(6 6) scale(.94)"><g>
       <circle cx="100" cy="100" r="96" fill="none" stroke="#D9A441" stroke-width="4"/>
       <circle cx="100" cy="100" r="87" fill="none" stroke="#D9A441" stroke-width="1.5"/>
       <g transform="rotate(45 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
@@ -6,11 +6,11 @@
       <g transform="rotate(225 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
       <g transform="rotate(315 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
       <g class="needle">
-        <polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/>
-        <g transform="rotate(90 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
-        <g transform="rotate(180 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
-        <g transform="rotate(270 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
+        <polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D1DA"/>
+        <g transform="rotate(90 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D1DA"/></g>
+        <g transform="rotate(180 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D1DA"/></g>
+        <g transform="rotate(270 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D1DA"/></g>
       </g>
-      <circle cx="100" cy="100" r="25" fill="#174D66" stroke="#FBFAF6" stroke-width="3"/>
+      <circle cx="100" cy="100" r="25" fill="#2F3D4C" stroke="#FBFAF6" stroke-width="3"/>
       <path d="M98.69 96.51Q98.69 98 97.89 99.04Q97.09 100.08 95.56 100.62Q94.03 101.16 91.80 101.16L90.01 101.16L90.01 104.85Q90.01 105.92 90.23 106.46Q90.46 106.99 91.11 107.17Q91.76 107.35 93.06 107.35L93.06 108.19L84.72 108.19L84.72 107.35Q85.67 107.31 86.14 107.13Q86.61 106.95 86.77 106.45Q86.93 105.94 86.93 104.96L86.93 95.25Q86.93 94.27 86.79 93.77Q86.65 93.28 86.23 93.09Q85.81 92.90 84.95 92.86L84.95 92.02L92.22 92.02Q95.41 92.02 97.05 93.16Q98.69 94.31 98.69 96.51M90.01 93.55L90.01 99.89L91.38 99.89Q93.40 99.89 94.35 99.07Q95.31 98.24 95.31 96.49Q95.31 94.92 94.50 94.06Q93.69 93.20 92.01 93.20L90.39 93.20Q90.01 93.20 90.01 93.55M103.16 108.19L97.41 108.19L97.41 107.35Q98.41 107.25 98.94 106.90Q99.46 106.55 99.82 105.65L105.34 91.81L106.90 91.81L111.92 104.07Q112.36 105.14 112.67 105.76Q112.99 106.38 113.32 106.70Q113.66 107.01 114.11 107.14Q114.56 107.27 115.28 107.33L115.28 108.19L107.34 108.19L107.34 107.33Q108.35 107.29 108.79 107.12Q109.23 106.95 109.23 106.45Q109.23 106.15 109.08 105.68Q108.94 105.21 108.68 104.56L108.20 103.30L102.26 103.30Q101.75 104.43 101.51 105.19Q101.27 105.94 101.27 106.38Q101.27 107.01 101.74 107.18Q102.22 107.35 103.16 107.35L103.16 108.19M105.24 95.67L102.74 102.04L107.74 102.04L105.32 95.67" fill="#FBFAF6"/>
     </g></g></svg>
