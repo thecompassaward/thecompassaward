@@ -9,7 +9,7 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#14284B">
+<meta name="theme-color" content="#12384A">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thecompassaward.com/">
 <meta property="og:title" content="The ComPAss Award™">
@@ -24,8 +24,8 @@
 <style>
 /* Layout: a navy masthead band, then calm paper sections on a 1120px column; brass marks the compass and every call to act. */
 :root{
-  --navy:#14284B; --navy-ink:#0F1B2D; --brass:#9A6A17; --brass-hi:#E0AE4E; --brass-soft:#F6EEDD;
-  --bg:#FBFAF6; --surface:#FFFFFF; --fg:#14213A; --muted:#4A566B; --line:#DDE2EA; --band:#14284B; --band-fg:#FBFAF6; --band-muted:#C9D3E6;
+  --navy:#12384A; --navy-ink:#0D2229; --brass:#9A6A17; --brass-hi:#E0AE4E; --brass-soft:#F6EEDD;
+  --bg:#FBFAF6; --surface:#FFFFFF; --fg:#12272F; --muted:#475D64; --line:#DAE5E7; --band:#12384A; --band-fg:#FBFAF6; --band-muted:#C4D8DD;
   --ok:#2F6B4F;
   --display:'Archivo', 'Helvetica Neue', Arial, sans-serif;
   --body:'Archivo', 'Helvetica Neue', Arial, sans-serif;
@@ -33,11 +33,11 @@
   --col:1120px; --r:10px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --navy:#C9D3E6; --brass:#E0AE4E; --brass-hi:#E9BE63; --brass-soft:#2A2418;
-  --bg:#0D1728; --surface:#14223A; --fg:#EEF1F6; --muted:#B4BFD2; --line:#26375A; --band:#0A1222; --band-fg:#F3F5F9; --band-muted:#B4BFD2; --ok:#7CC4A0; color-scheme:dark}}
+  --navy:#C4D8DD; --brass:#E0AE4E; --brass-hi:#E9BE63; --brass-soft:#2A2418;
+  --bg:#0B1C21; --surface:#122A31; --fg:#EEF1F6; --muted:#AFC6CB; --line:#22434D; --band:#08161A; --band-fg:#F3F5F9; --band-muted:#AFC6CB; --ok:#7CC4A0; color-scheme:dark}}
 :root[data-theme="dark"]{
-  --navy:#C9D3E6; --brass:#E0AE4E; --brass-hi:#E9BE63; --brass-soft:#2A2418;
-  --bg:#0D1728; --surface:#14223A; --fg:#EEF1F6; --muted:#B4BFD2; --line:#26375A; --band:#0A1222; --band-fg:#F3F5F9; --band-muted:#B4BFD2; --ok:#7CC4A0; color-scheme:dark}
+  --navy:#C4D8DD; --brass:#E0AE4E; --brass-hi:#E9BE63; --brass-soft:#2A2418;
+  --bg:#0B1C21; --surface:#122A31; --fg:#EEF1F6; --muted:#AFC6CB; --line:#22434D; --band:#08161A; --band-fg:#F3F5F9; --band-muted:#AFC6CB; --ok:#7CC4A0; color-scheme:dark}
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--fg);font:16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--band)}
@@ -50,12 +50,12 @@ p{margin:0}
 .pa{color:var(--brass-hi)}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
 .btn{display:inline-flex;align-items:center;gap:8px;min-height:46px;padding:0 22px;border-radius:8px;font-weight:700;text-decoration:none;border:2px solid transparent;font-size:16px;cursor:pointer;font-family:var(--body)}
-.btn-brass{background:var(--brass-hi);color:#14284B}
-.btn-brass:hover{background:#ECC173;color:#14284B}
+.btn-brass{background:var(--brass-hi);color:#12384A}
+.btn-brass:hover{background:#ECC173;color:#12384A}
 .btn-ghost{border-color:currentColor;color:var(--band-fg);background:transparent}
 .btn-ghost:hover{color:var(--brass-hi)}
-.btn-navy{background:#14284B;color:#FBFAF6}
-.btn-navy:hover{background:#1E3766;color:#FBFAF6}
+.btn-navy{background:#12384A;color:#FBFAF6}
+.btn-navy:hover{background:#1B4A59;color:#FBFAF6}
 
 /* header */
 .top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--band);color:var(--band-fg);border-bottom:1px solid rgba(255,255,255,.08)}
@@ -224,18 +224,18 @@ footer a{color:var(--band-fg)}
       <g transform="rotate(225 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
       <g transform="rotate(315 100 100)"><polygon points="100,34 100,100 92,92" fill="#D9A441"/><polygon points="100,34 100,100 108,92" fill="#B07A1E"/></g>
       <g class="needle">
-        <polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/>
-        <g transform="rotate(90 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
-        <g transform="rotate(180 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
-        <g transform="rotate(270 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C9D3E6"/></g>
+        <polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/>
+        <g transform="rotate(90 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
+        <g transform="rotate(180 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
+        <g transform="rotate(270 100 100)"><polygon points="100,10 100,100 86,86" fill="#FBFAF6"/><polygon points="100,10 100,100 114,86" fill="#C4D8DD"/></g>
       </g>
-      <circle cx="100" cy="100" r="25" fill="#14284B" stroke="#FBFAF6" stroke-width="3"/>
+      <circle cx="100" cy="100" r="25" fill="#12384A" stroke="#FBFAF6" stroke-width="3"/>
       <text x="100" y="109" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="25" font-weight="800" fill="#FBFAF6">PA</text>
     </g>
     <g id="person">
-      <circle cx="50" cy="50" r="48" fill="#E3E8F0"/>
-      <circle cx="50" cy="40" r="16" fill="#9AA6BA"/>
-      <path d="M20 84c4-16 16-24 30-24s26 8 30 24" fill="#9AA6BA"/>
+      <circle cx="50" cy="50" r="48" fill="#E0EAEC"/>
+      <circle cx="50" cy="40" r="16" fill="#95AEB3"/>
+      <path d="M20 84c4-16 16-24 30-24s26 8 30 24" fill="#95AEB3"/>
     </g>
   </defs>
 </svg>
