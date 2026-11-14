@@ -527,10 +527,13 @@ footer a{color:var(--band-fg)}
     d.querySelector('span').textContent=n[1];
     wall.appendChild(d);
   }
-  real.forEach(function(n){card(n,'');});
-  // Sample cards fill out the first row (4 on wide screens, 2 on phones) until enough real ambassadors join
-  for(var k=0;k<Math.max(0,4-real.length);k++){card(names[k],(real.length+k>=2?' wide-only':''));}
-  if(real.length>=4){var nt=document.getElementById('amb-notice');if(nt)nt.style.display='none';}
+  // Real names appear only once at least 4 have joined, so nobody stands alone. Until then: one row of samples.
+  if(real.length>=4){
+    real.forEach(function(n){card(n,'');});
+    var nt=document.getElementById('amb-notice');if(nt)nt.style.display='none';
+  } else {
+    for(var k=0;k<4;k++){card(names[k],(k>=2?' wide-only':''));}
+  }
 
   var m=document.createElement('a');m.className='amb-more';m.href='#join';
   m.innerHTML='<b>Spots are open in our first class of 50</b><span>Become a National Ambassador \u2192</span>';wall.appendChild(m);
